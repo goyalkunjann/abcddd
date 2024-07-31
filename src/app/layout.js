@@ -1,7 +1,7 @@
 import { Poppins } from "next/font/google";
 import Script from 'next/script';
-import "../../node_modules/slick-carousel/slick/slick.css";
-import "../../node_modules/slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 import { Header } from "./component/Header/Header";
 import { Footer } from "./component/Footer/Footer";
@@ -15,7 +15,6 @@ const poppinsFont = Poppins({
 });
 
 export default function RootLayout({ children }) {
-  console.log("TESTING");
   return (
     <html lang="en">
       <head>
@@ -66,7 +65,9 @@ export default function RootLayout({ children }) {
           ></iframe>
         </noscript>
         <UiProvider>
+          <Header />
           <Wrapper>{children}</Wrapper>
+          <Footer />
         </UiProvider>
       </body>
     </html>
