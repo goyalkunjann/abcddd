@@ -1,0 +1,11 @@
+version: '3.2'
+
+services:
+    housebanao_fe_dev:
+      image: housebanao/repo:housebanao_fe_dev
+      
+networks:
+  default:
+    external:
+      name: hb-network
+
